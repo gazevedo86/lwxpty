@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriaTabelaOpcoesGerais extends Migration
+class CriaTabelaUf extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CriaTabelaOpcoesGerais extends Migration
      */
     public function up()
     {
-        Schema::create('tb_opcoes_gerais', function (Blueprint $table) {
+        Schema::create('tb_conf_uf', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("area")->nullable()->default(null);
-            $table->string("sub_area")->nullable()->default(null);
-            $table->string("nome")->nullable()->default(null);
-            $table->string("descricao")->nullable()->default(null);
+            $table->string('nome_uf');
+            $table->string('sigla_uf');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CriaTabelaOpcoesGerais extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_opcoes_gerais');
+        Schema::dropIfExists('tb_conf_uf');
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 class Entidade extends Model
 {
+  
   private $tabela = 'tb_entidade';
 
 
