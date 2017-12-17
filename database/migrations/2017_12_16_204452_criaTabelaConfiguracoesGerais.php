@@ -18,8 +18,8 @@ class CriaTabelaConfiguracoesGerais extends Migration
             $table->integer("fk_entidade")->unsigned();
             $table->integer("fk_opcoes_gerais")->unsigned();
             $table->string("valor")->nullable()->default(null);
-            $table->foreign("fk_entidade")->refences("id")->on("tb_entidade")->onDelete("cascade");
-            $table->foreign("fk_opcoes_gerais")->refences("id")->on("tb_opcoes_gerais")->onDelete("cascade");
+            $table->foreign("fk_entidade")->references("id")->on("tb_entidade")->onDelete("cascade");
+            $table->foreign("fk_opcoes_gerais")->references("id")->on("tb_opcoes_gerais")->onDelete("cascade");
             $table->timestamps();
         });
     }

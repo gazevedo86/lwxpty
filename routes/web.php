@@ -16,4 +16,8 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/cadastroEntidade', 'controllerEntidade@index');
+Route::get('/cadastroEntidade', 'controllerEntidade@index')->name('cadastroEntidade');
+Route::post('/cadNovaEntidade', 'controllerEntidade@store');
+
+
+Route::get("/adminEntidade/{id}", 'controllerEntidade@adminEntidade')->name('adminEntidade');

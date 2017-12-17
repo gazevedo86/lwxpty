@@ -15,10 +15,10 @@ class CriaTabelaEntidades extends Migration
     {
         Schema::create('tb_entidade', function (Blueprint $table) {
             $table->increments('id');
-            $table->biginteger('codigo')->nullable()->default(null);
-            $table->string('nome')->nullable()->default(null);
-            $table->string('identificador')->nullable()->default(null);
-            $table->string('tipo_identificador')->nullable()->default(null);
+            $table->biginteger('codigo_entidade')->nullable()->default(null);
+            $table->string('nome_entidade')->nullable()->default(null);
+            $table->string('tipo')->nullable()->default(null);
+            $table->string('numero')->nullable()->default(null);
             $table->timestamps();
         });
     }

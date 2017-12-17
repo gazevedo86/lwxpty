@@ -32,7 +32,7 @@
     </div>
     @include('layouts.menuDireita')
   </div>
-
+  @stack('scripts')
   <script src="{{ asset('js/app.js') }}"></script>
 
   <script>
