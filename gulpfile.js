@@ -9,14 +9,9 @@ elixir(mix => {
         'resources/assets/inspinia/font-awesome/css/font-awesome.css',
         'resources/assets/inspinia/css/style.css',
         'resources/assets/inspinia/css/animate.css',
-
-
         ], 'public/css/app.css', './');
     mix.scripts([
-
         'resources/assets/inspinia/js/jquery-3.1.1.min.js',
-
-
         'resources/assets/inspinia/js/jquery-3.1.1.min.js',
         'resources/assets/inspinia/js/bootstrap.min.js',
         'resources/assets/inspinia/js/plugins/metisMenu/jquery.metisMenu.js',
@@ -38,8 +33,6 @@ elixir(mix => {
         'resources/assets/inspinia/js/plugins/easypiechart/jquery.easypiechart.js',
         'resources/assets/inspinia/js/plugins/sparkline/jquery.sparkline.min.js',
         'resources/assets/inspinia/js/demo/sparkline-demo.js',
-
-
         'resources/assets/js/app.js'
         ], 'public/js/app.js', './');
 

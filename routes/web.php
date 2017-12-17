@@ -16,4 +16,4 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/cadastroEntidade, controllerEntidade@index')->name('cadastroEntidade');
+Route::get('/cadastroEntidade', 'controllerEntidade@index');

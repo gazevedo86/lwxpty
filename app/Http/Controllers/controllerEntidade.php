@@ -13,7 +13,7 @@ class controllerEntidade extends Controller
      */
     public function index()
     {
-        //
+        return view('entidades.cadastroEntidade');
     }
 
     /**

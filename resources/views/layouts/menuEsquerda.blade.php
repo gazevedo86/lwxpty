@@ -19,7 +19,7 @@
                 <div class="logo-element">
                     IN+
                 </div>
-            </li>
+            </li>       
             <li class="active">
                 <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
@@ -27,7 +27,7 @@
                 </ul>
             </li>
             <li>
-                <a href="{{ url(/cadastroEntidade) }}"><i class="fa fa-diamond"></i> <span class="nav-label">Entidades</span></a>
+                <a href="{{ url('/cadastroEntidade') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Entidades</span></a>
             </li>
 
 
