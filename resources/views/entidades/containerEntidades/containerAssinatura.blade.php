@@ -1,38 +1,38 @@
-<div class="modal inmodal" id="modalAssinaturas" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content animated fadeIn">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <i class="fa fa-clock-o modal-icon"></i>
-        <h4 class="modal-title">ASSINATURAS</h4>
-        <small>Informe os dados abaixo</small>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Assinaturas</h5>
       </div>
-      {{Form::open(array('url'=>'cadNovaEntidade', 'name'=>'form','class'=>'form-horizontal','method'=>'post'))}}
-      <div class="modal-body">
+      <div class="ibox-content">
         <div class="form-group">
-          {{ Form::label('codigo_entidade','Código') }}
-          {{ Form::number('codigo_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'codigo_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('nome_entidade','Entidade') }}
-          {{ Form::text('nome_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('tipo','Tipo') }}
-          {{ Form::select('tipo',array('1'=>'CNPJ','2'=>'CEI','3'=>'CPF'),'',array('class'=>'select2_demo_1 form-control','nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('numero','Número') }}
-          {{ Form::text('numero','',array('class'=>'form-control','placeholder'=>'numero','id'=>'numero')) }}
-
-
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="col-md-3 col-md-offset-9 ">
+                {{ Form::button('Nova assinatura', array('class'=>'btn btn-block btn-info')) }}
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="col-md-6">
+                {{ Form::label('nome_assinatura','Nome da assinatura') }}
+                {{ Form::text('nome_assinatura','',array('class'=>'form-control','id'=>'nome_assinatura')) }}
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="col-md-6">
+                {{ Form::label('descricao_cargo','Nome da assinatura') }}
+                {{ Form::text('descricao_cargo','',array('class'=>'form-control','id'=>'descricao_cargo')) }}
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="col-md-6">
+                {{ Form::label('documento_assinatura','Enviar assinatura') }}
+                {{ Form::file('documento_assinatura',array('class'=>'form-control','id'=>'documento_assinatura')) }}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        {{Form::button('Fechar',array('class'=>'btn btn-info','name'=>'fechar','data-dismiss'=>"modal" ))}}
-        {{Form::submit('Inserir',array('class'=>'btn btn-primary','name'=>'salvar'))}}
-      </div>
-      {{Form::close()}}
     </div>
   </div>
 </div>

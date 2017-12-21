@@ -15,9 +15,9 @@ class CriaTabelaConfCalculos extends Migration
     {
         Schema::create('tb_conf_calculos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("mudar_referencia_salario_automatica")->unsigned();
-            $table->integer("muda_referencia_salario_tempo")->unsigned();
-            $table->integer("muda_referencia_salario_carencia")->unsigned();
+            $table->integer("mudar_referencia_salario_automatica")->nullable()->default(null);
+            $table->integer("muda_referencia_salario_tempo")->nullable()->default(null);
+            $table->integer("muda_referencia_salario_carencia")->nullable()->default(null);
             $table->decimal("salario_minimo_nacional",8,2)->nullable()->default(null);
             $table->decimal("salario_minimo_municipal",8,2)->nullable()->default(null);
             $table->decimal("base_calculo_prefeito_vice",8,2)->nullable()->default(null);
@@ -30,15 +30,19 @@ class CriaTabelaConfCalculos extends Migration
             $table->string("tempo_servico_data_controle")->nullable()->default(null);
             $table->string("dsr_data_controle")->nullable()->default(null);
 
-            $table->integer("descontar_irrf")->unsigned();
-            $table->integer("permitir_holerite_negativo")->unsigned();
-            $table->integer("gerar_adiantamento_mensal_admitidos_mes")->unsigned();
-            $table->integer("pagar_avos_afastamento")->unsigned();
-            $table->integer("calcular_cnae_preponderante")->unsigned();
-            $table->integer("calcular_hora_salarial")->unsigned();
-            $table->integer("abater_afastamentos_anteriores")->unsigned();
-            $table->integer("bloquear_gravacao_calcular")->unsigned();
-            $table->integer("gerar_adiantamento_mensal_servidores")->unsigned();
+            $table->integer("descontar_irrf")->nullable()->default(null);
+            $table->integer("permitir_holerite_negativo")->nullable()->default(null);
+            $table->integer("gerar_adiantamento_mensal_admitidos_mes")->nullable()->default(null);
+            $table->integer("pagar_avos_afastamento")->nullable()->default(null);
+            $table->integer("calcular_cnae_preponderante")->nullable()->default(null);
+            $table->integer("calcular_hora_salarial")->nullable()->default(null);
+            $table->integer("abater_afastamentos_anteriores")->nullable()->default(null);
+            $table->integer("bloquear_gravacao_calcular")->nullable()->default(null);
+            $table->integer("gerar_adiantamento_mensal_servidores")->nullable()->default(null);
+            $table->integer('fk_usuario')->unsigned();
+            $table->integer('fk_entidade')->unsigned();
+            $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
+            $table->foreign('fk_usuario')->references('id')->on('users');
 
 
 

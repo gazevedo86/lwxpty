@@ -10,6 +10,7 @@ elixir(mix => {
         'resources/assets/inspinia/css/style.css',
         'resources/assets/inspinia/css/animate.css',
         'resources/assets/inspinia/css/plugins/select2/select2.min.css',
+        'resources/assets/inspinia/css/plugins/switchery/switchery.css',
         'resources/assets/inspinia/css/plugins/switchery/switchery.css'
         ], 'public/css/app.css', './');
     mix.scripts([
@@ -35,7 +36,7 @@ elixir(mix => {
         'resources/assets/inspinia/js/plugins/sparkline/jquery.sparkline.min.js',
         'resources/assets/inspinia/js/demo/sparkline-demo.js',
         'resources/assets/inspinia/js/entidade.js',
-
+        'resources/assets/inspinia/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js',
         'resources/assets/inspinia/js/plugins/select2/select2.full.min.js',
 'resources/assets/inspinia/js/plugins/switchery/switchery.js',
         'resources/assets/js/app.js'

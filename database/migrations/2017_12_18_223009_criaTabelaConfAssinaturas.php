@@ -18,6 +18,8 @@ class CriaTabelaConfAssinaturas extends Migration
             $table->string("nome_assinatura")->nullable()->default(null);
             $table->string("descricao_cargo")->nullable()->default(null);
             $table->binary("assinatura_digitalizada")->nullable()->default(null);
+            $table->integer('fk_usuario')->unsigned();
+            $table->integer('fk_entidade')->unsigned();
             $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
             $table->foreign('fk_usuario')->references('id')->on('users');
             $table->timestamps();

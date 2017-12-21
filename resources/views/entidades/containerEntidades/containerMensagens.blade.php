@@ -1,38 +1,57 @@
-<div class="modal inmodal" id="modalMensagens" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content animated fadeIn">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <i class="fa fa-clock-o modal-icon"></i>
-        <h4 class="modal-title">Mensagens</h4>
-        <small>Informe os dados abaixo</small>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Mensagens</h5>
       </div>
-      {{Form::open(array('url'=>'cadNovaEntidade', 'name'=>'form','class'=>'form-horizontal','method'=>'post'))}}
-      <div class="modal-body">
+      <div class="ibox-content">
         <div class="form-group">
-          {{ Form::label('codigo_entidade','Código') }}
-          {{ Form::number('codigo_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'codigo_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('nome_entidade','Entidade') }}
-          {{ Form::text('nome_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('tipo','Tipo') }}
-          {{ Form::select('tipo',array('1'=>'CNPJ','2'=>'CEI','3'=>'CPF'),'',array('class'=>'select2_demo_1 form-control','nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('numero','Número') }}
-          {{ Form::text('numero','',array('class'=>'form-control','placeholder'=>'numero','id'=>'numero')) }}
+          <div class="row">
+            <div class="col-md-6">
+              <div class="col-sm-12">
+                {{ Form::label('mensagem_holerite_linha1','Holerite linha 1') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagem_holerite_linha1','',array('class'=>'form-control','id'=>'mensagem_holerite_linha1'))}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-sm-12">
+                {{ Form::label('mensagem_holerite_aniversario1','Mensagem de aniversário holerite linha 1') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagem_holerite_aniversario1','',array('class'=>'form-control','id'=>'mensagem_holerite_aniversario1'))}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="col-sm-12">
+                {{ Form::label('mensagem_holerite_linha2','Holerite linha 2') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagem_holerite_linha2','',array('class'=>'form-control','id'=>'mensagem_holerite_linha2'))}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-sm-12">
+                {{ Form::label('mensagem_holerite_aniversario2','Mensagem de aniversário holerite linha 2') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagem_holerite_aniversario2','',array('class'=>'form-control','id'=>'mensagem_holerite_aniversario2'))}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="col-sm-12">
+                {{ Form::label('mensagem_holerite_linha3','Holerite linha 3') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagem_holerite_linha3','',array('class'=>'form-control','id'=>'mensagem_holerite_linha3'))}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="col-sm-12">
+                {{ Form::label('mensagem_holerite_aniversario3','Mensagem de aniversário holerite linha 3') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagem_holerite_aniversario3','',array('class'=>'form-control','id'=>'mensagem_holerite_aniversario3'))}}
+              </div>
+            </div>
+          </div>
 
 
         </div>
       </div>
-      <div class="modal-footer">
-        {{Form::button('Fechar',array('class'=>'btn btn-info','name'=>'fechar','data-dismiss'=>"modal" ))}}
-        {{Form::submit('Inserir',array('class'=>'btn btn-primary','name'=>'salvar'))}}
-      </div>
-      {{Form::close()}}
     </div>
   </div>
 </div>

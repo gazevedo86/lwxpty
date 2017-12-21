@@ -1,38 +1,53 @@
-<div class="modal inmodal" id="modalRais" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content animated fadeIn">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <i class="fa fa-clock-o modal-icon"></i>
-        <h4 class="modal-title">Rais</h4>
-        <small>Informe os dados abaixo</small>
+<div class="row">
+  <div class="col-md-9">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Rais</h5>
       </div>
-      {{Form::open(array('url'=>'cadNovaEntidade', 'name'=>'form','class'=>'form-horizontal','method'=>'post'))}}
-      <div class="modal-body">
+      <div class="ibox-content">
         <div class="form-group">
-          {{ Form::label('codigo_entidade','Código') }}
-          {{ Form::number('codigo_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'codigo_entidade')) }}
+          <div class="row">
+            <div class="col-sm-3">
+              {{ Form::label('rais_atividade_economica', 'Atividade econômica') }}
+              {{Form::select('rais_atividade_economica',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'rais_atividade_economica'))}}
+            </div>
+            <div class="col-sm-9">
+              {{ Form::label('descricao_rais_atividade_economica', '&nbsp;') }}
+              {{Form::text('descricao_rais_atividade_economica','',array('class'=>'form-control','id'=>'descricao_rais_atividade_economica'))}}
+            </div>
+          </div>
         </div>
         <div class="form-group">
-          {{ Form::label('nome_entidade','Entidade') }}
-          {{ Form::text('nome_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'nome_entidade')) }}
+          <div class="row">
+            <div class="col-sm-3">
+              {{ Form::label('rais_codigo_municipio', 'Código do munucípio') }}
+              {{ Form::select('rais_codigo_municipio',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'rais_codigo_municipio'))}}
+            </div>
+            <div class="col-sm-9">
+              {{ Form::label('descricao_rais_codigo_municipio', '&nbsp;') }}
+              {{Form::text('descricao_rais_codigo_municipio','',array('class'=>'form-control','id'=>'rais_codigo_municipio'))}}
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Proprietários</h5>
+      </div>
+      <div class="ibox-content">
         <div class="form-group">
-          {{ Form::label('tipo','Tipo') }}
-          {{ Form::select('tipo',array('1'=>'CNPJ','2'=>'CEI','3'=>'CPF'),'',array('class'=>'select2_demo_1 form-control','nome_entidade')) }}
+          <div class="row">
+            <div class="col-sm-12">
+              {{ Form::label('rais_quantidade_proprietarios', 'Quantidade de proprietários') }}
+              {{Form::text('rais_quantidade_proprietarios','',array('class'=>'form-control','id'=>'rais_quantidade_proprietarios'))}}
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          {{ Form::label('numero','Número') }}
-          {{ Form::text('numero','',array('class'=>'form-control','placeholder'=>'numero','id'=>'numero')) }}
 
-
-        </div>
       </div>
-      <div class="modal-footer">
-        {{Form::button('Fechar',array('class'=>'btn btn-info','name'=>'fechar','data-dismiss'=>"modal" ))}}
-        {{Form::submit('Inserir',array('class'=>'btn btn-primary','name'=>'salvar'))}}
-      </div>
-      {{Form::close()}}
     </div>
   </div>
 </div>

@@ -57,40 +57,40 @@
     </div>
   </div>
 
-          <div id="container13salario">
+          <div id="container13salario" style="display:none">
             @include('entidades.containerEntidades.container13Salario')
           </div>
-          <div id="containerAssinatura">
+          <div id="containerAssinatura" style="display:none">
             @include('entidades.containerEntidades.containerAssinatura')
           </div>
-          <div id="containerCalculo">
+          <div id="containerCalculo"  style="display:none">
             @include('entidades.containerEntidades.containerCalculo')
           </div>
-          <div id="containerEndereco">
+          <div id="containerEndereco" style="display:none">
             @include('entidades.containerEntidades.containerEndereco')
           </div>
-          <div id="containerFerias">
+          <div id="containerFerias" style="display:none">
             @include('entidades.containerEntidades.containerFerias')
           </div>
-          <div id="containerFgts">
+          <div id="containerFgts" style="display:none">
             @include('entidades.containerEntidades.containerFgts')
           </div>
-          <div id="containerFolhaComplementar">
+          <div id="containerFolhaComplementar" style="display:none">
             @include('entidades.containerEntidades.containerFolhaComplementar')
           </div>
-          <div id="containerLicencaPremium">
+          <div id="containerLicencaPremium" style="display:none">
             @include('entidades.containerEntidades.containerLicencaPremium')
           </div>
-          <div id="containerMensagens">
+          <div id="containerMensagens" style="display:none">
             @include('entidades.containerEntidades.containerMensagens')
           </div>
           <div id="containerOpcoesGerais">
             @include('entidades.containerEntidades.containerOpcoesGerais')
           </div>
-          <div id="containerPrevidencia">
+          <div id="containerPrevidencia" style="display:none">
             @include('entidades.containerEntidades.containerPrevidencia')
           </div>
-          <div id="containerRais">
+          <div id="containerRais" style="display:none">
             @include('entidades.containerEntidades.containerRais')
           </div>
 

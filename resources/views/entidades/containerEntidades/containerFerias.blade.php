@@ -1,38 +1,58 @@
-<div class="modal inmodal" id="modalFerias" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content animated fadeIn">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <i class="fa fa-clock-o modal-icon"></i>
-        <h4 class="modal-title">Férias</h4>
-        <small>Informe os dados abaixo</small>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Tipo de pagamento de férias</h5>
       </div>
-      {{Form::open(array('url'=>'cadNovaEntidade', 'name'=>'form','class'=>'form-horizontal','method'=>'post'))}}
-      <div class="modal-body">
+      <div class="ibox-content">
         <div class="form-group">
-          {{ Form::label('codigo_entidade','Código') }}
-          {{ Form::number('codigo_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'codigo_entidade')) }}
+          <div class="row">
+            <div class="col-md-3 ">
+              {{ Form::label('tipo_pagamento_ferias_recibo_ferias','Recibo de férias') }}
+            </div>
+            <div class="col-md-1">
+              <div class="switch">
+                <div class="onoffswitch">
+                  {{ Form::checkbox('tipo_pagamento_ferias_recibo_ferias','',true,array('class'=>'onoffswitch-checkbox','id'=>'tipo_pagamento_ferias_recibo_ferias')) }}
+                  <label class="onoffswitch-label" for="tipo_pagamento_ferias_recibo_ferias">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 ">
+              {{ Form::label('tipo_pagamento_ferias_folha_mensal_terco_apenas','Folha mensal 1/3 apenas') }}
+            </div>
+            <div class="col-md-1">
+              <div class="switch">
+                <div class="onoffswitch">
+                  {{ Form::checkbox('tipo_pagamento_ferias_folha_mensal_terco_apenas','',true,array('class'=>'onoffswitch-checkbox','id'=>'tipo_pagamento_ferias_folha_mensal_terco_apenas')) }}
+                  <label class="onoffswitch-label" for="tipo_pagamento_ferias_folha_mensal_terco_apenas">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 ">
+              {{ Form::label('tipo_pagamento_ferias_folha_mensal_adiantamento','Folha mensal c/ adiantamento') }}
+            </div>
+            <div class="col-md-1">
+              <div class="switch">
+                <div class="onoffswitch">
+                  {{ Form::checkbox('tipo_pagamento_ferias_folha_mensal_adiantamento','',true,array('class'=>'onoffswitch-checkbox','id'=>'tipo_pagamento_ferias_folha_mensal_adiantamento')) }}
+                  <label class="onoffswitch-label" for="tipo_pagamento_ferias_folha_mensal_adiantamento">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          {{ Form::label('nome_entidade','Entidade') }}
-          {{ Form::text('nome_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('tipo','Tipo') }}
-          {{ Form::select('tipo',array('1'=>'CNPJ','2'=>'CEI','3'=>'CPF'),'',array('class'=>'select2_demo_1 form-control','nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('numero','Número') }}
-          {{ Form::text('numero','',array('class'=>'form-control','placeholder'=>'numero','id'=>'numero')) }}
 
-
-        </div>
       </div>
-      <div class="modal-footer">
-        {{Form::button('Fechar',array('class'=>'btn btn-info','name'=>'fechar','data-dismiss'=>"modal" ))}}
-        {{Form::submit('Inserir',array('class'=>'btn btn-primary','name'=>'salvar'))}}
-      </div>
-      {{Form::close()}}
     </div>
   </div>
 </div>

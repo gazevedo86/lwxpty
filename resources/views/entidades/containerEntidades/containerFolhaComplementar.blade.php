@@ -1,38 +1,82 @@
-<div class="modal inmodal" id="modalFolhaComplementar" tabindex="-1" role="dialog"  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content animated fadeIn">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <i class="fa fa-clock-o modal-icon"></i>
-        <h4 class="modal-title">Folha complementar</h4>
-        <small>Informe os dados abaixo</small>
+<div class="row">
+  <div class="col-md-6">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Folha complementar</h5>
       </div>
-      {{Form::open(array('url'=>'cadNovaEntidade', 'name'=>'form','class'=>'form-horizontal','method'=>'post'))}}
-      <div class="modal-body">
+      <div class="ibox-content">
         <div class="form-group">
-          {{ Form::label('codigo_entidade','Código') }}
-          {{ Form::number('codigo_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'codigo_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('nome_entidade','Entidade') }}
-          {{ Form::text('nome_entidade','',array('class'=>'form-control','placeholder'=>'Entidade','id'=>'nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('tipo','Tipo') }}
-          {{ Form::select('tipo',array('1'=>'CNPJ','2'=>'CEI','3'=>'CPF'),'',array('class'=>'select2_demo_1 form-control','nome_entidade')) }}
-        </div>
-        <div class="form-group">
-          {{ Form::label('numero','Número') }}
-          {{ Form::text('numero','',array('class'=>'form-control','placeholder'=>'numero','id'=>'numero')) }}
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-md-10 ">
+                  {{ Form::label('folha_complementar_discriminar_eventos','Discriminar eventos da folha complementar na folha posterior?') }}
+                </div>
+                <div class="col-md-2">
+                  <div class="switch">
+                    <div class="onoffswitch">
+                      {{ Form::checkbox('13_salario_acumular_13_salario_unico_evento','',true,array('class'=>'onoffswitch-checkbox','id'=>'13_salario_acumular_13_salario_unico_evento')) }}
+                      <label class="onoffswitch-label" for="13_salario_acumular_13_salario_unico_evento">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="row">
+                <div class="col-md-10 ">
+                  {{ Form::label('folha_complementar_comparar_apenas_eventos_dois_calculos','Comparar apenas eventos que existem nos dois calculos?') }}
+                </div>
+                <div class="col-md-2">
+                  <div class="switch">
+                    <div class="onoffswitch">
+                      {{ Form::checkbox('folha_complementar_comparar_apenas_eventos_dois_calculos','',true,array('class'=>'onoffswitch-checkbox','id'=>'folha_complementar_comparar_apenas_eventos_dois_calculos')) }}
+                      <label class="onoffswitch-label" for="descontar_irrf">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
 
-
+            </div>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        {{Form::button('Fechar',array('class'=>'btn btn-info','name'=>'fechar','data-dismiss'=>"modal" ))}}
-        {{Form::submit('Inserir',array('class'=>'btn btn-primary','name'=>'salvar'))}}
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="col-md-12">
+      <div class="ibox-title">
+        <h5>Folha complementar</h5>
       </div>
-      {{Form::close()}}
+      <div class="ibox-content">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-md-10 ">
+                  {{ Form::label('folha_complementar_tipo_folha_complementar','Discriminar eventos da folha complementar na folha posterior?') }}
+                  {{ Form::select('folha_complementar_tipo_folha_complementar',array('1'=>'tipo1'), null,array('class'=>'select2_demo_1 form-control')) }}
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="row">
+                {{ Form::label('folha_complementar_considerar_salario','Considerar salario') }}
+                <div class="col-md-10 ">
+                  {{ Form::select('folha_complementar_tipo_folha_complementar',array('1'=>'tipo1'), null,array('class'=>'select2_demo_1 form-control')) }}
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
