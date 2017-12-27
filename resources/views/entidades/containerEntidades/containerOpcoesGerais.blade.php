@@ -93,9 +93,9 @@
       </div>
       <div class="ibox-content">
         <div class="row">
-          <div class="col-md-12">
-            {{ Form::label('opcoes_gerais_tipo_exclusao','Prefeito/ Vice') }}
-            {{ Form::select('opcoes_gerais_tipo_exclusao',array('1'=>'tipo1'),array('class'=>'select2_demo_1 form-control','id'=>'base_calculo_prefeito_vice')) }}
+          <div class="col-md-10">
+            {{ Form::label('opcoes_gerais_tipo_exclusao','Tipo de exclusão') }}
+            {{Form::select('opcoes_gerais_tipo_exclusao',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'opcoes_gerais_tipo_exclusao'))}}
           </div>
         </div>
       </div>

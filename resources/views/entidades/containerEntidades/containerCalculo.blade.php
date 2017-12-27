@@ -19,13 +19,13 @@
               </div>
             </div>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-2">
             {{ Form::label('mudar_referencia_automaticamente_tempo_anos','Tempo (anos)') }}
           </div>
           <div class="col-md-3">
             {{ Form::text('mudar_referencia_automaticamente_tempo_anos','',array('class'=>'touchspin1','id'=>'mudar_referencia_automaticamente_tempo_anos')) }}
           </div>
-          <div class="col-md-1">
+          <div class="col-md-2">
             {{ Form::label('mudar_referencia_automaticamente_carencia_anos','Carência (anos)') }}
           </div>
           <div class="col-md-3">
@@ -305,4 +305,3 @@
     </div>
   </div>
 </div>
-  

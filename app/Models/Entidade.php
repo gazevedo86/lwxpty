@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use DB;
 class Entidade extends Model
 {
-  
+
   private $tabela = 'tb_entidade';
 
 
@@ -17,5 +17,12 @@ class Entidade extends Model
 
     public function retornaEntidadeCadastradas(){
      return $entidades = DB::table($this->tabela)->select()->get();
+    }
+
+    public function retornaCadastroEntidade($id){
+      return $cadastroEntidade = DB::table('tb_entidade')
+          ->select()
+          ->where('id', '=', $id)
+          ->get();
     }
 }
