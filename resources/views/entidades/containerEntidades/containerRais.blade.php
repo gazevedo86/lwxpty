@@ -1,5 +1,11 @@
+
+@foreach ($entidades as $entidade)
+@endforeach
+
+{{ Form::open(array('url' => "/insereConfiguracao/$entidade->id/area/rais", 'method'=>'post')) }}
+
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-4">
     <div class="col-md-12">
       <div class="ibox-title">
         <h5>Rais</h5>
@@ -7,25 +13,17 @@
       <div class="ibox-content">
         <div class="form-group">
           <div class="row">
-            <div class="col-sm-3">
-              {{ Form::label('rais_atividade_economica', 'Atividade econômica') }}
-              {{Form::select('rais_atividade_economica',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'rais_atividade_economica'))}}
-            </div>
-            <div class="col-sm-9">
-              {{ Form::label('descricao_rais_atividade_economica', '&nbsp;') }}
-              {{Form::text('descricao_rais_atividade_economica','',array('class'=>'form-control','id'=>'descricao_rais_atividade_economica'))}}
+            <div class="col-sm-12">
+              {{ Form::label('fk_atividade_economica', 'Atividade econômica') }}
+              {{Form::select('fk_atividade_economica',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_atividade_economica'))}}
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-sm-3">
-              {{ Form::label('rais_codigo_municipio', 'Código do munucípio') }}
-              {{ Form::select('rais_codigo_municipio',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'rais_codigo_municipio'))}}
-            </div>
-            <div class="col-sm-9">
-              {{ Form::label('descricao_rais_codigo_municipio', '&nbsp;') }}
-              {{Form::text('descricao_rais_codigo_municipio','',array('class'=>'form-control','id'=>'rais_codigo_municipio'))}}
+            <div class="col-sm-12">
+              {{ Form::label('fk_cidades', 'Código do munucípio') }}
+              {{ Form::select('fk_cidades',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_cidades'))}}
             </div>
           </div>
         </div>
@@ -42,7 +40,8 @@
           <div class="row">
             <div class="col-sm-12">
               {{ Form::label('rais_quantidade_proprietarios', 'Quantidade de proprietários') }}
-              {{Form::text('rais_quantidade_proprietarios','',array('class'=>'form-control','id'=>'rais_quantidade_proprietarios'))}}
+              {{ Form::text('qtd_proprietarios','',array('class'=>'touchspin1','id'=>'qtd_proprietarios')) }}
+
             </div>
           </div>
         </div>
@@ -51,3 +50,10 @@
     </div>
   </div>
 </div>
+<div class="hr-line-dashed"></div>
+  <div class="ibox-content">
+  <button class="btn btn-white" type="submit">Cancel</button>
+  {{Form::submit('Salvar',array('class'=>'btn btn-primary','name'=>'salvar'))}}
+</div>
+
+{{ Form::close() }}

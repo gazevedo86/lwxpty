@@ -21,3 +21,4 @@ Route::post('/cadNovaEntidade', 'controllerEntidade@store');
 
 
 Route::get("/adminEntidade/{id}", 'controllerEntidade@adminEntidade')->name('adminEntidade');
+Route::get("/insereConfiguracao/{id}/area/{string}", 'controllerConfiguracao@update')->name('adminEntidade');

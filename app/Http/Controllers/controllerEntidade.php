@@ -24,9 +24,10 @@ class controllerEntidade extends Controller
     }
 
     public function adminEntidade($id){
-      
-      return view('entidades.adminEntidade');
+      $entidades = $this->entidade->retornaCadastroEntidade($id);
+      return view('entidades.adminEntidade', ['entidades'=>$entidades]);
     }
+
 
 
     /**
