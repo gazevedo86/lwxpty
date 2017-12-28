@@ -18,7 +18,7 @@ class CriaTabelaConfLicencaPremio extends Migration
        $table->integer('licenca_premio_calcular_media')->nullable();
        $table->integer('licenca_premio_controla_data_pagamento')->nullable();
        $table->integer('licenca_premio_falta_injustificada')->nullable();
-       $table->integer('licenca_premio_justificada')->nullable();
+       $table->integer('licenca_premio_falta_justificada')->nullable();
        $table->integer('licenca_premio_falta_abonada')->nullable();
        $table->integer('fk_entidade')->unsigned();
        $table->integer('fk_users')->unsigned();

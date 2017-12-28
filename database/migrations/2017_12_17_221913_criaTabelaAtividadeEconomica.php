@@ -13,7 +13,7 @@ class CriaTabelaAtividadeEconomica extends Migration
      */
     public function up()
     {
-        Schema::create('tb_ativ_economica', function (Blueprint $table) {
+        Schema::create('tb_atividade_economica', function (Blueprint $table) {
             $table->increments('id');
             $table->biginteger('codigo')->nullable()->default(null);
             $table->string('nome')->nullable()->default(null);

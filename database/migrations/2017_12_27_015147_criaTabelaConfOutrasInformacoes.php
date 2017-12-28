@@ -15,7 +15,7 @@ class CriaTabelaConfOutrasInformacoes extends Migration
     {
         Schema::create('tb_conf_outras_informacoes', function (Blueprint $table) {
           $table->increments('id');
-      $table->binary('outras_informacoes_brasao')->nullable();
+      $table->binary('outras_informacoes_imagem')->nullable();
       $table->string('outras_informacoes_telefone', 45)->nullable();
       $table->string('outras_informacoes_email', 255)->nullable();
       $table->string('outras_informacoes_fax', 255)->nullable();
@@ -23,8 +23,6 @@ class CriaTabelaConfOutrasInformacoes extends Migration
       $table->date('outras_informacoes_data')->nullable();
       $table->string('outras_informacoes_nome_abreviado', 255)->nullable();
       $table->string('outras_informacoes_tipo', 255)->nullable();
-      $table->integer('outras_informacoes_sincronizacao_rpps')->nullable();
-      $table->string('outras_informacoes_codigo_entidade_rpps', 45)->nullable();
       $table->integer('fk_entidade')->unsigned();
       $table->integer('fk_users')->unsigned();
 

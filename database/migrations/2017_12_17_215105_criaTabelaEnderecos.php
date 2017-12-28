@@ -15,11 +15,11 @@ class CriaTabelaEnderecos extends Migration
     {
         Schema::create('tb_conf_endereco', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cep')->nullable()->default(null);
-            $table->string('logradouro')->nullable()->default(null);
-            $table->string('numero')->nullable()->default(null);
-            $table->string('complemento')->nullable()->default(null);
-            $table->string('bairro')->nullable()->default(null);
+            $table->string('endereco_cep')->nullable()->default(null);
+            $table->string('endereco_logradouro')->nullable()->default(null);
+            $table->string('endereco_numero')->nullable()->default(null);
+            $table->string('endereco_complemento')->nullable()->default(null);
+            $table->string('endereco_bairro')->nullable()->default(null);
             $table->integer('fk_cidade')->unsigned();
             $table->integer('fk_uf')->unsigned();
             $table->integer('fk_entidade')->unsigned();

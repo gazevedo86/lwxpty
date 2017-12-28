@@ -16,7 +16,7 @@ class CriaTabelaConfFerias extends Migration
         Schema::create('tb_conf_ferias', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string("tipo_pagamento_ferias")->nullable()->default(null);
+            $table->string("ferias_tipo_pagamento")->nullable()->default(null);
 
             $table->integer('fk_users')->unsigned();
             $table->integer('fk_entidade')->unsigned();

@@ -15,22 +15,22 @@ class CriaTabelaConf13Salario extends Migration
     {
         Schema::create('tb_conf_13salario', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("acumular_13_salario_unico_evento")->nullable()->default(null);
-            $table->integer("divisor_13_salario")->nullable()->default(null);
-            $table->integer("calcular_media_fechamento")->nullable()->default(null);
-            $table->integer("incluir_eventuais_lancados_mensal")->nullable()->default(null);
+            $table->integer("13salario_acumular_unico_evento")->nullable()->default(null);
+            $table->integer("13salario_divisor")->nullable()->default(null);
+            $table->integer("13salario_calcular_media_fechamento")->nullable()->default(null);
+            $table->integer("13salario_incluir_eventuais_lancados_mensal")->nullable()->default(null);
 
-            $table->string("tipo_media")->nullable()->default(null);
+            $table->string("13salario_tipo_media")->nullable()->default(null);
 
-            $table->integer("calcular_media_adiantamento")->nullable()->default(null);
-            $table->integer("porcentagem_adiantamento")->nullable()->default(null);
-            $table->integer("calcular_remanescente")->nullable()->default(null);
-            $table->string("mes_para_calculo")->nullable()->default(null);
+            $table->integer("13salario_calcular_media_adiantamento")->nullable()->default(null);
+            $table->integer("13salario_porcentagem_adiantamento")->nullable()->default(null);
+            $table->integer("13salario_calcular_remanescente")->nullable()->default(null);
+            $table->string("13salario_mes_para_calculo")->nullable()->default(null);
 
-            $table->string("complemento_13_salario_tipo")->nullable()->default(null);
-            $table->string("complemento_13_salario_tipo2")->nullable()->default(null);
-            $table->string("complemento_13_salario_demonstrar")->nullable()->default(null);
-            $table->decimal("complemento_13_salario_nao_paga_valor_inferior",8,2)->nullable()->default(null);
+            $table->string("13salario_complemento_tipo")->nullable()->default(null);
+            $table->string("13salario_complemento_tipo2")->nullable()->default(null);
+            $table->string("13salario_complemento_demonstrar")->nullable()->default(null);
+            $table->decimal("13salario_complemento_nao_paga_valor_inferior",8,2)->nullable()->default(null);
 
             $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();

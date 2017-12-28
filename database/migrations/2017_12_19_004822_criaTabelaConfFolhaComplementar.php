@@ -15,10 +15,10 @@ class CriaTabelaConfFolhaComplementar extends Migration
     {
         Schema::create('tb_conf_folha_complementar', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("discriminar_eventos_folha")->nullable()->default(null);;
-            $table->integer("comparar_apenas_eventos")->nullable()->default(null);;
-            $table->string("tipo_folha_complementar")->nullable()->default(null);
-            $table->string("considerar_salario")->nullable()->default(null);
+            $table->integer("folha_complementar_discriminar_eventos")->nullable()->default(null);;
+            $table->integer("folha_complementar_comparar_eventos")->nullable()->default(null);;
+            $table->string("folha_complementar_tipo")->nullable()->default(null);
+            $table->string("folha_complementar_considerar_salario")->nullable()->default(null);
             $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();
             $table->foreign('fk_entidade')->references('id')->on('tb_entidade');

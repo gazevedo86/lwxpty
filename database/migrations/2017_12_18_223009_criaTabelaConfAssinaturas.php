@@ -15,8 +15,8 @@ class CriaTabelaConfAssinaturas extends Migration
     {
         Schema::create('tb_conf_assinaturas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("nome_assinatura")->nullable()->default(null);
-            $table->string("descricao_cargo")->nullable()->default(null);
+            $table->string("assinatura_nome")->nullable()->default(null);
+            $table->string("assinatura_descricao_cargo")->nullable()->default(null);
             $table->binary("assinatura_digitalizada")->nullable()->default(null);
             $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();

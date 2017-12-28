@@ -13,9 +13,10 @@ class CriaTabelaCidade extends Migration
      */
     public function up()
     {
-        Schema::create('tb_conf_cidade', function (Blueprint $table) {
+        Schema::create('tb_cidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome_cidade');
+            $table->biginteger('codigo');
+            $table->string('nome');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CriaTabelaCidade extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb_conf_cidade');
+        Schema::dropIfExists('tb_cidades');
     }
 }
