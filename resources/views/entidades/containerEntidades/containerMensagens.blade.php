@@ -1,3 +1,7 @@
+@foreach ($entidades as $entidade)
+@endforeach
+
+{{ Form::open(array('url' => "/insereConfiguracao/$entidade->id/area/mensagem", 'method'=>'post')) }}
 <div class="row">
   <div class="col-md-12">
     <div class="col-md-12">
@@ -9,49 +13,40 @@
           <div class="row">
             <div class="col-md-6">
               <div class="col-sm-12">
-                {{ Form::label('mensagem_holerite_linha1','Holerite linha 1') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagem_holerite_linha1','',array('class'=>'form-control','id'=>'mensagem_holerite_linha1'))}}
+                {{ Form::label('mensagens_holerite','Mensagens holerite') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagens_holerite','',array('class'=>'form-control','id'=>'mensagens_holerite'))}}
               </div>
             </div>
             <div class="col-md-6">
               <div class="col-sm-12">
-                {{ Form::label('mensagem_holerite_aniversario1','Mensagem de aniversário holerite linha 1') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagem_holerite_aniversario1','',array('class'=>'form-control','id'=>'mensagem_holerite_aniversario1'))}}
+                {{ Form::label('mensagens_aniversario','Mensagem de aniversário') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagens_aniversario','',array('class'=>'form-control','id'=>'mensagens_aniversario'))}}
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="col-sm-12">
-                {{ Form::label('mensagem_holerite_linha2','Holerite linha 2') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagem_holerite_linha2','',array('class'=>'form-control','id'=>'mensagem_holerite_linha2'))}}
+                {{ Form::label('mensagens_cesta_basica','Mensagem cesta básica') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagens_cesta_basica','',array('class'=>'form-control','id'=>'mensagens_cesta_basica'))}}
               </div>
             </div>
             <div class="col-md-6">
               <div class="col-sm-12">
-                {{ Form::label('mensagem_holerite_aniversario2','Mensagem de aniversário holerite linha 2') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagem_holerite_aniversario2','',array('class'=>'form-control','id'=>'mensagem_holerite_aniversario2'))}}
+                {{ Form::label('mensagens_rodape_relatoios','Rodapé de relatório') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagens_rodape_relatoios','',array('class'=>'form-control','id'=>'mensagens_rodape_relatoios'))}}
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="col-sm-12">
-                {{ Form::label('mensagem_holerite_linha3','Holerite linha 3') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagem_holerite_linha3','',array('class'=>'form-control','id'=>'mensagem_holerite_linha3'))}}
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="col-sm-12">
-                {{ Form::label('mensagem_holerite_aniversario3','Mensagem de aniversário holerite linha 3') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagem_holerite_aniversario3','',array('class'=>'form-control','id'=>'mensagem_holerite_aniversario3'))}}
-              </div>
-            </div>
-          </div>
-
-
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="hr-line-dashed"></div>
+  <div class="ibox-content">
+  <button class="btn btn-white" type="submit">Cancel</button>
+  {{Form::submit('Salvar',array('class'=>'btn btn-primary','name'=>'salvar'))}}
+</div>
+
+{{ Form::close() }}

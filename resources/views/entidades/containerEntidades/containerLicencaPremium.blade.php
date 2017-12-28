@@ -1,3 +1,7 @@
+@foreach ($entidades as $entidade)
+@endforeach
+
+{{ Form::open(array('url' => "/insereConfiguracao/$entidade->id/area/licencaPremio", 'method'=>'post')) }}
 <div class="row">
   <div class="col-md-8">
     <div class="col-md-12">
@@ -22,12 +26,12 @@
               </div>
             </div>
             <div class="col-md-4 ">
-              {{ Form::label('licenca_premio_controla_licenca_data_pagamento','Controla licença prêmio por data de pagamento') }}
+              {{ Form::label('licenca_premio_controla_data_pagamento','Controla licença prêmio por data de pagamento') }}
             </div>
             <div class="col-md-2">
               <div class="switch">
                 <div class="onoffswitch">
-                  {{ Form::checkbox('licenca_premio_controla_licenca_data_pagamento','',true,array('class'=>'onoffswitch-checkbox','id'=>'licenca_premio_controla_licenca_data_pagamento')) }}
+                  {{ Form::checkbox('licenca_premio_controla_data_pagamento','',true,array('class'=>'onoffswitch-checkbox','id'=>'licenca_premio_controla_data_pagamento')) }}
                   <label class="onoffswitch-label" for="licenca_premio_controla_licenca_data_pagamento">
                     <span class="onoffswitch-inner"></span>
                     <span class="onoffswitch-switch"></span>
@@ -70,8 +74,8 @@
           <div class="hr-line-dashed"></div>
           <div class="form-group">
             <div class="row">
-              <div class="col-md-8 ">
                 {{ Form::label('licenca_premio_falta_justificada','Falta justificada?') }}
+                <div class="col-md-8 ">
               </div>
               <div class="col-md-4">
                 <div class="switch">
@@ -111,3 +115,10 @@
     </div>
   </div>
 </div>
+<div class="hr-line-dashed"></div>
+  <div class="ibox-content">
+  <button class="btn btn-white" type="submit">Cancel</button>
+  {{Form::submit('Salvar',array('class'=>'btn btn-primary','name'=>'salvar'))}}
+</div>
+
+{{ Form::close() }}
