@@ -22,10 +22,10 @@ class CriaTabelaConfMensagens extends Migration
        $table->integer('fk_entidade')->unsigned();
        $table->integer('fk_users')->unsigned();
 
-       $table->index('fk_users','fk_tb_conf_mensagens_users1_idx');
+       $table->index('fk_usuario','fk_tb_conf_mensagens_users1_idx');
        $table->index('fk_entidade','fk_tb_conf_mensagens_tb_entidade1_idx');
 
-       $table->foreign('fk_users')
+       $table->foreign('fk_usuario')
            ->references('id')->on('users');
 
        $table->foreign('fk_entidade')

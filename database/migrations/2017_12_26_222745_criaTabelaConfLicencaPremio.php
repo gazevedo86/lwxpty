@@ -21,15 +21,15 @@ class CriaTabelaConfLicencaPremio extends Migration
        $table->integer('licenca_premio_falta_justificada')->nullable();
        $table->integer('licenca_premio_falta_abonada')->nullable();
        $table->integer('fk_entidade')->unsigned();
-       $table->integer('fk_users')->unsigned();
+       $table->integer('fk_usuario')->unsigned();
 
        $table->index('fk_entidade','fk_tb_licenca_premio_tb_entidade1_idx');
-       $table->index('fk_users','fk_tb_licenca_premio_users1_idx');
+       $table->index('fk_usuario','fk_tb_licenca_premio_users1_idx');
 
        $table->foreign('fk_entidade')
            ->references('id')->on('tb_entidade');
 
-       $table->foreign('fk_users')
+       $table->foreign('fk_usuario')
            ->references('id')->on('users');
 
        $table->timestamps();

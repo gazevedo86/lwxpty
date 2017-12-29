@@ -38,12 +38,12 @@
               {{Form::text('endereco_bairro',(isset($pessoa->bairro)?$pessoa->bairro:''),array('class'=>'form-control','id'=>'endereco_bairro','placeholder'=>'Bairro'))}}
             </div>
             <div class="col-sm-4">
-              {{ Form::label('endereco_cidade', 'Cidade') }}
-              {{Form::select('endereco_cidade',array('1'=>'cidades'),null,array('class'=>'select2_demo_1 form-control','id'=>'endereco_cidade'))}}
+              {{ Form::label('fk_cidade', 'Cidade') }}
+              {{Form::select('fk_cidade',array('1'=>'cidades'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_cidade'))}}
             </div>
             <div class="col-sm-4">
-              {{ Form::label('endereco_uf', 'UF') }}
-              {{Form::select('endereco_uf',array('1'=>'estados'),null,array('class'=>'select2_demo_1 form-control','id'=>'endereco_uf'))}}
+              {{ Form::label('fk_uf', 'UF') }}
+              {{Form::select('fk_uf',array('1'=>'estados'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_uf'))}}
             </div>
           </div>
         </div>

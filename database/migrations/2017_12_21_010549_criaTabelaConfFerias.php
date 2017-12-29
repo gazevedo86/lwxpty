@@ -18,10 +18,10 @@ class CriaTabelaConfFerias extends Migration
 
             $table->string("ferias_tipo_pagamento")->nullable()->default(null);
 
-            $table->integer('fk_users')->unsigned();
+            $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();
             $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
-            $table->foreign('fk_users')->references('id')->on('users');
+            $table->foreign('fk_usuario')->references('id')->on('users');
 
             $table->timestamps();
         });

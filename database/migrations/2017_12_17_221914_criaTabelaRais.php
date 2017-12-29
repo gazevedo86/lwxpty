@@ -15,11 +15,17 @@ class CriaTabelaRais extends Migration
     {
         Schema::create('tb_conf_rais', function (Blueprint $table) {
             $table->increments('id');
+
+
             $table->integer('fk_atividade_economica')->unsigned();
             $table->integer('fk_cidades')->unsigned();
             $table->integer('qtd_proprietarios')->nullable()->default(null);
+            $table->integer('fk_usuario')->unsigned();
+            $table->integer('fk_entidade')->unsigned();
             $table->foreign('fk_atividade_economica')->references('id')->on('tb_ativ_economica');
             $table->foreign('fk_cidades')->references('id')->on('tb_cidades');
+            $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
+            $table->foreign('fk_usuario')->references('id')->on('users');
 
             $table->timestamps();
         });

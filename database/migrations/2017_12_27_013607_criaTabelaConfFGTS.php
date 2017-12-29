@@ -28,13 +28,13 @@ class CriaTabelaConfFGTS extends Migration
 		    $table->integer('fk_users')->unsigned()->nullable();
 
 		    $table->index('fk_bancos','fk_tb_conf_fgts_tb_bancos_idx');
-		    $table->index('fk_users','fk_tb_conf_fgts_users1_idx');
+		    $table->index('fk_usuario','fk_tb_conf_fgts_users1_idx');
 		    $table->index('fk_entidade','fk_tb_conf_fgts_tb_entidade1_idx');
 
 		    $table->foreign('fk_bancos')
 		        ->references('id')->on('tb_lista_bancos');
 
-		    $table->foreign('fk_users')
+		    $table->foreign('fk_usuario')
 		        ->references('id')->on('users');
 
 		    $table->foreign('fk_entidade')

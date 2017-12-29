@@ -34,11 +34,11 @@ class CriaTabelaConfOpcoesGerais extends Migration
 		    $table->integer('opcoes_gerais_faltas_abonadas')->nullable();
 		    $table->integer('opcoes_gerais_suspensao')->nullable();
 		    $table->integer('fk_entidade')->unsigned();
-		    $table->integer('fk_users')->unsigned();
+		    $table->integer('fk_usuario')->unsigned();
 
 		    $table->index('fk_febraban_eventos','fk_tb_conf_opcoes_gerais_tb_febraban_eventos1_idx');
 		    $table->index('fk_entidade','fk_tb_conf_opcoes_gerais_tb_entidade1_idx');
-		    $table->index('fk_users','fk_tb_conf_opcoes_gerais_users1_idx');
+		    $table->index('fk_usuario','fk_tb_conf_opcoes_gerais_users1_idx');
 
 		    $table->foreign('fk_febraban_eventos')
 		        ->references('id')->on('tb_febraban_eventos');
@@ -46,7 +46,7 @@ class CriaTabelaConfOpcoesGerais extends Migration
 		    $table->foreign('fk_entidade')
 		        ->references('id')->on('tb_entidade');
 
-		    $table->foreign('fk_users')
+		    $table->foreign('fk_usuario')
 		        ->references('id')->on('users');
 
 		    $table->timestamps();

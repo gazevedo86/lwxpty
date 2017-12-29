@@ -33,8 +33,8 @@
             </div>
             <div class="col-md-6">
               <div class="col-sm-12">
-                {{ Form::label('mensagens_rodape_relatoios','Rodapé de relatório') }}<span class="text-danger">*</span>
-                {{ Form::text('mensagens_rodape_relatoios','',array('class'=>'form-control','id'=>'mensagens_rodape_relatoios'))}}
+                {{ Form::label('mensagens_rodape_relatorios','Rodapé de relatório') }}<span class="text-danger">*</span>
+                {{ Form::text('mensagens_rodape_relatorios','',array('class'=>'form-control','id'=>'mensagens_rodape_relatorios'))}}
               </div>
             </div>
           </div>

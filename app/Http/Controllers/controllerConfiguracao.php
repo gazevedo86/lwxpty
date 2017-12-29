@@ -82,6 +82,58 @@ class controllerConfiguracao extends Controller
            return redirect()->route("adminEntidade",['id'=>$id]);
         }
 
+        if($area == 'calculo'){
+          $calculo = $configuracao->calculo($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'endereco'){
+          $endereco = $configuracao->endereco($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'ferias'){
+          $ferias = $configuracao->ferias($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'folhaComplementar'){
+          $folhaComplementar = $configuracao->folhaComplementar($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'licencaPremio'){
+          $licencaPremio = $configuracao->licencaPremio($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'mensagem'){
+          $mensagem = $configuracao->mensagem($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'opcoesGerais'){
+          $opcoesGerais = $configuracao->opcoesGerais($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'previdencia'){
+          $previdencia = $configuracao->previdencia($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'rais'){
+          $rais = $configuracao->rais($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        if($area == 'outrasInformacoes'){
+          $outrasInformacoes = $configuracao->outrasInformacoes($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+        print_r($area);
+        exit;
 
     }
 

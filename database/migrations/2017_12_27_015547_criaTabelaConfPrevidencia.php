@@ -24,7 +24,7 @@ class CriaTabelaConfPrevidencia extends Migration
      $table->index('fk_lista_sefip','fk_tb_conf_previdencia_lista_sefip1_idx');
      $table->index('fk_lista_gps','fk_tb_conf_previdencia_lista_gps1_idx');
      $table->index('fk_entidade','fk_tb_conf_previdencia_tb_entidade1_idx');
-     $table->index('fk_users','fk_tb_conf_previdencia_users1_idx');
+     $table->index('fk_usuario','fk_tb_conf_previdencia_users1_idx');
 
      $table->foreign('fk_lista_sefip')
          ->references('id')->on('tb_lista_sefip');
@@ -35,7 +35,7 @@ class CriaTabelaConfPrevidencia extends Migration
      $table->foreign('fk_entidade')
          ->references('id')->on('tb_entidade');
 
-     $table->foreign('fk_users')
+     $table->foreign('fk_usuario')
          ->references('id')->on('users');
 
      $table->timestamps();

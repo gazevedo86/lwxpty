@@ -97,7 +97,7 @@
       <div id="container13salario" style="display:none">
         @include('entidades.containerEntidades.container13Salario')
       </div>
-      <div id="containerAssinatura"  >
+      <div id="containerAssinatura" style="display:none" >
         @include('entidades.containerEntidades.containerAssinatura')
       </div>
       <div id="containerCalculo" style="display:none">
@@ -130,7 +130,7 @@
       <div id="containerRais" style="display:none">
         @include('entidades.containerEntidades.containerRais')
       </div>
-      <div id="containerOutros" style="display:none">
+      <div id="containerOutros" >
         @include('entidades.containerEntidades.containerOutros')
       </div>
 
