@@ -94,10 +94,10 @@
     </div>
   </div>
   <div class="row ">
-      <div id="container13salario" >
+      <div id="container13salario" style="display:none">
         @include('entidades.containerEntidades.container13Salario')
       </div>
-      <div id="containerAssinatura" style="display:none" >
+      <div id="containerAssinatura"  >
         @include('entidades.containerEntidades.containerAssinatura')
       </div>
       <div id="containerCalculo" style="display:none">

@@ -10,6 +10,8 @@ class controllerEntidade extends Controller
 
     private $entidade = '';
     function __construct(){
+      $this->middleware('auth');
+
       $this->entidade = new Entidade;
     }
     /**

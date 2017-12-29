@@ -24,7 +24,7 @@ class CriaTabelaEnderecos extends Migration
             $table->integer('fk_uf')->unsigned();
             $table->integer('fk_entidade')->unsigned();
             $table->integer('fk_usuario')->unsigned();
-            $table->foreign('fk_cidade')->references('id')->on('tb_conf_cidade');
+            $table->foreign('fk_cidade')->references('id')->on('tb_cidades');
             $table->foreign('fk_uf')->references('id')->on('tb_conf_uf');
             $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
             $table->foreign('fk_usuario')->references('id')->on('users');

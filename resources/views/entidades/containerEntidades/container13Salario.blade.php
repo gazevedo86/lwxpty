@@ -79,13 +79,13 @@
       <div class="ibox-content">
         <div class="row">
           <div class="col-md-10 ">
-            {{ Form::label('13salario_acumular_salario_unico_evento','Acumular 13º salário em um unico evento?') }}
+            {{ Form::label('13salario_acumular_unico_evento','Acumular 13º salário em um unico evento?') }}
           </div>
           <div class="col-md-2">
             <div class="switch">
               <div class="onoffswitch">
-                {{ Form::checkbox('13salario_acumular_salario_unico_evento','',true,array('class'=>'onoffswitch-checkbox','id'=>'13salario_acumular_salario_unico_evento')) }}
-                <label class="onoffswitch-label" for="13salario_acumular_salario_unico_evento">
+                {{ Form::checkbox('13salario_acumular_unico_evento','',true,array('class'=>'onoffswitch-checkbox','id'=>'13salario_acumular_unico_evento')) }}
+                <label class="onoffswitch-label" for="13salario_acumular_unico_evento">
                   <span class="onoffswitch-inner"></span>
                   <span class="onoffswitch-switch"></span>
                 </label>

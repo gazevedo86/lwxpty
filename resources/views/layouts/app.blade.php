@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -19,11 +20,15 @@
 
 <body>
   <div id="wrapper">
+@auth
+
     @include('layouts.menuEsquerda')
 
     <div id="page-wrapper" class="gray-bg">
       @include('layouts.menuSuperior')
       <div class="wrapper wrapper-content">
+      @endauth
+
         @yield('content')
       </div>
       <div class="footer">

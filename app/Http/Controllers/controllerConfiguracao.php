@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Configuracao;
 class controllerConfiguracao extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
+     public function __construct()
+     {
+       $this->middleware('auth');
+
+     }
+
     public function index()
     {
         //
@@ -66,9 +69,20 @@ class controllerConfiguracao extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id,$area)
     {
-        //
+        $post = $request->except('_token','salvar');
+        $configuracao = new Configuracao();
+        if($area == '13salario'){
+          $salario = $configuracao->decSalario($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+        if($area == 'assinatura'){
+          $assinatura = $configuracao->assinatura($post, $id);
+           return redirect()->route("adminEntidade",['id'=>$id]);
+        }
+
+
     }
 
     /**
