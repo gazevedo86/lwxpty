@@ -6,9 +6,12 @@
   <div class="row">
   <div class="col-lg-12">
 
-      <div class="ibox float-e-margins">
+      <div class="ibox float-e-margins" id="menuConfiguracoes">
           <div class="ibox-title">
-              <h5>Menu</h5>
+            <div class="col-md-3">
+              <button type="button" class="btn btn-block btn-info" data-target="#menuVoltar" data-toggle="container">VOLTAR</button>
+            </div>
+
               <div class="ibox-tools">
                   <a class="collapse-link">
                       <i class="fa fa-chevron-up"></i>
@@ -78,14 +81,14 @@
                   <button type="button" class="btn btn-block btn-info" data-target="#containerRais" data-toggle="container">RAIS</button>
                 </div>
                 <div class="form-group col-md-3">
-                  <button type="button" class="btn btn-block btn-info" data-target="#container13Salario" data-toggle="container">13º SALÁRIO</button>
+                  <button type="button" class="btn btn-block btn-info" data-target="#container13salario" data-toggle="container">13º SALÁRIO</button>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group col-md-4 col-md-offset-4">
-                  <button type="button" class="btn btn-block btn-info" data-target="#containerOutros" data-toggle="container">OUTROS</button>
+                  <button type="button" class="btn btn-block btn-info" data-target="#containerOutrasInformacoes" data-toggle="container">OUTRAS INFORMAÇÕES</button>
                 </div>
               </div>
             </div>
@@ -93,17 +96,17 @@
       </div>
     </div>
   </div>
-  <div class="row ">
+  <div class="row" id="conteinerConfiguracoes">
       <div id="container13salario" style="display:none">
         @include('entidades.containerEntidades.container13Salario')
       </div>
-      <div id="containerAssinatura" style="display:none" >
+      <div id="containerAssinaturas" style="display:none">
         @include('entidades.containerEntidades.containerAssinatura')
       </div>
       <div id="containerCalculo" style="display:none">
         @include('entidades.containerEntidades.containerCalculo')
       </div>
-      <div id="containerEndereco" style="display:none"  >
+      <div id="containerEndereco" style="display:none">
         @include('entidades.containerEntidades.containerEndereco')
       </div>
       <div id="containerFerias" style="display:none">
@@ -130,7 +133,7 @@
       <div id="containerRais" style="display:none">
         @include('entidades.containerEntidades.containerRais')
       </div>
-      <div id="containerOutros" >
+      <div id="containerOutrasInformacoes">
         @include('entidades.containerEntidades.containerOutros')
       </div>
 
