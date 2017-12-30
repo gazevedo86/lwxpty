@@ -14,7 +14,7 @@ class CriaTabelaEntidades extends Migration
     public function up()
     {
         Schema::create('tb_entidade', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_entidade');
             $table->biginteger('codigo_entidade')->nullable()->default(null);
             $table->string('nome_entidade')->nullable()->default(null);
             $table->string('tipo')->nullable()->default(null);

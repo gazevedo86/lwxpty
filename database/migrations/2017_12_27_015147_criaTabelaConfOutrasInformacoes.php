@@ -14,7 +14,7 @@ class CriaTabelaConfOutrasInformacoes extends Migration
     public function up()
     {
         Schema::create('tb_conf_outras_informacoes', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_outras_informacoes_entidade');
       $table->binary('outras_informacoes_imagem')->nullable();
       $table->string('outras_informacoes_telefone', 45)->nullable();
       $table->string('outras_informacoes_email', 255)->nullable();
@@ -30,7 +30,7 @@ class CriaTabelaConfOutrasInformacoes extends Migration
       $table->index('fk_usuario','fk_tb_conf_outras_informacoes_users1_idx');
 
       $table->foreign('fk_entidade')
-          ->references('id')->on('tb_entidade');
+          ->references('id_entidade')->on('tb_entidade');
 
       $table->foreign('fk_usuario')
           ->references('id')->on('users');

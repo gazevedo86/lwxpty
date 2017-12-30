@@ -1,7 +1,7 @@
 @foreach ($entidades as $entidade)
 @endforeach
 
-{{ Form::open(array('url' => "/insereConfiguracao/$entidade->id/area/assinatura", 'method'=>'post')) }}
+{{ Form::open(array('url' => "/insereConfiguracao/$entidade->id_entidade/area/assinatura", 'method'=>'post')) }}
 
 
 <div class="row">

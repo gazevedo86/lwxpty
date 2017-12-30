@@ -11,6 +11,13 @@
   </div>
   <ul class="nav navbar-top-links navbar-right">
     <li>
+      {{Form::open(array('url'=>'escolheEntidadeAtiva', 'name'=>'formEscolheEntidade', 'method' => 'post'))}}
+      {{ Form::select('entidades',$listaEntidades,((Session::get('entidade.ativa'))?Session::get('entidade.ativa'):''),array("class"=>'form-controll select2_demo_1', 'placeholder'=>'Entidade ativa','id'=>'selectEmpresa')) }}
+        {{Form::submit('Ativar',array('class'=>'btn btn-xs btn-primary','name'=>'escolherEmpresa'))}}
+      {{Form::close()}}
+    </li>
+
+    <li>
       <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
     </li>
     <li class="dropdown">

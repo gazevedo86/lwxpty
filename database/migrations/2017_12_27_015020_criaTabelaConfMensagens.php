@@ -14,13 +14,13 @@ class CriaTabelaConfMensagens extends Migration
     public function up()
     {
         Schema::create('tb_conf_mensagens', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_mensagens');
        $table->string('mensagens_holerite', 255)->nullable();
        $table->string('mensagens_aniversario', 255)->nullable();
        $table->string('mensagens_cesta_basica', 255)->nullable();
        $table->string('mensagens_rodape_relatorios', 255)->nullable();
        $table->integer('fk_entidade')->unsigned();
-       $table->integer('fk_users')->unsigned();
+       $table->integer('fk_usuario')->unsigned();
 
        $table->index('fk_usuario','fk_tb_conf_mensagens_users1_idx');
        $table->index('fk_entidade','fk_tb_conf_mensagens_tb_entidade1_idx');
@@ -29,7 +29,7 @@ class CriaTabelaConfMensagens extends Migration
            ->references('id')->on('users');
 
        $table->foreign('fk_entidade')
-           ->references('id')->on('tb_entidade');
+           ->references('id_entidade')->on('tb_entidade');
 
        $table->timestamps();
         });

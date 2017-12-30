@@ -21,18 +21,24 @@
                     IN+
                 </div>
             </li>
-            <li class="active">
+            <li>
                 <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li class="active"><a href="{{ url('/') }}">Dashboard v.2</a></li>
                 </ul>
             </li>
+
             <li>
-                <a href="{{ url('/cadastroEntidade') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Entidades</span></a>
+                <a href=""><i class="fa fa-th-large"></i> <span class="nav-label">Configurações</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                  <li>
+                      <a href="{{ url('/cadastroEntidade') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Entidades</span></a>
+                  </li>
+                  <li>
+                      <a href="{{ url('/eventos') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Eventos</span></a>
+                  </li>
+                </ul>
             </li>
-
-
         </ul>
-
     </div>
 </nav>

@@ -14,13 +14,13 @@ class CriaTabelaConfFerias extends Migration
     public function up()
     {
         Schema::create('tb_conf_ferias', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_ferias');
 
             $table->string("ferias_tipo_pagamento")->nullable()->default(null);
 
             $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();
-            $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
+            $table->foreign('fk_entidade')->references('id_entidade')->on('tb_entidade');
             $table->foreign('fk_usuario')->references('id')->on('users');
 
             $table->timestamps();

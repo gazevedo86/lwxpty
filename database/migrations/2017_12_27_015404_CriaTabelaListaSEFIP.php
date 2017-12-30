@@ -14,7 +14,7 @@ class CriaTabelaListaSEFIP extends Migration
     public function up()
     {
         Schema::create('tb_lista_sefip', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_lista_sefip');
        $table->integer('sefip_codigo')->nullable();
        $table->string('sefip_nome', 255)->nullable();
 

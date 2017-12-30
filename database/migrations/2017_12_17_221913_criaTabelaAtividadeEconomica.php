@@ -14,7 +14,7 @@ class CriaTabelaAtividadeEconomica extends Migration
     public function up()
     {
         Schema::create('tb_ativ_economica', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_atividade_economica');
             $table->biginteger('codigo')->nullable()->default(null);
             $table->string('nome')->nullable()->default(null);
             $table->decimal('grau_risco',3,2)->nullable()->default(null);

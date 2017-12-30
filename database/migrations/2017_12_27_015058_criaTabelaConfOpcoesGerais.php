@@ -14,7 +14,7 @@ class CriaTabelaConfOpcoesGerais extends Migration
     public function up()
     {
         Schema::create('tb_conf_opcoes_gerais', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_opcoes_gerais');
 		    $table->string('opcoes_gerais_evento_teto')->nullable();
 		    $table->string('opcoes_gerais_ordem', 45)->nullable();
 		    $table->string('opcoes_gerais_tipo_exclusao', 255)->nullable();
@@ -41,10 +41,10 @@ class CriaTabelaConfOpcoesGerais extends Migration
 		    $table->index('fk_usuario','fk_tb_conf_opcoes_gerais_users1_idx');
 
 		    $table->foreign('fk_febraban_eventos')
-		        ->references('id')->on('tb_febraban_eventos');
+		        ->references('id_febraban')->on('tb_febraban_eventos');
 
 		    $table->foreign('fk_entidade')
-		        ->references('id')->on('tb_entidade');
+		        ->references('id_entidade')->on('tb_entidade');
 
 		    $table->foreign('fk_usuario')
 		        ->references('id')->on('users');

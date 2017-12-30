@@ -14,7 +14,7 @@ class CriaTabelaUf extends Migration
     public function up()
     {
         Schema::create('tb_conf_uf', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_uf');
             $table->string('nome_uf');
             $table->string('sigla_uf');
             $table->timestamps();

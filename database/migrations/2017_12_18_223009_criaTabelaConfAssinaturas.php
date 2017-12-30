@@ -14,13 +14,13 @@ class CriaTabelaConfAssinaturas extends Migration
     public function up()
     {
         Schema::create('tb_conf_assinaturas', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_assinaturas');
             $table->string("assinatura_nome")->nullable()->default(null);
             $table->string("assinatura_descricao_cargo")->nullable()->default(null);
             $table->binary("assinatura_digitalizada")->nullable()->default(null);
             $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();
-            $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
+            $table->foreign('fk_entidade')->references('id_entidade')->on('tb_entidade');
             $table->foreign('fk_usuario')->references('id')->on('users');
             $table->timestamps();
         });

@@ -64,11 +64,11 @@
               <tbody>
                 @foreach ($retornaEntidade as $entidade)
                   <tr>
-                    <td>{{$entidade->id}}</td>
+                    <td>{{$entidade->id_entidade}}</td>
                     <td>{{$entidade->codigo_entidade}}</td>
                     <td>{{ $entidade->nome_entidade }}</td>
                     <td class="text-navy">
-                      <a href="{{ url("/adminEntidade/{$entidade->id}") }}"> <button class="btn btn-primary dim btn-sm"  type="button"><i class="fa fa-check"></i></button> </a>
+                      <a href="{{ url("/adminEntidade/{$entidade->id_entidade}") }}"> <button class="btn btn-primary dim btn-sm"  type="button"><i class="fa fa-check"></i></button> </a>
                       <button class="btn btn-danger dim btn-sm" type="button"><i class="fa fa-trash"></i></button>
                     </td>
                   </tr>

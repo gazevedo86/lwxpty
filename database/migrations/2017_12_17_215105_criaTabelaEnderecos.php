@@ -14,7 +14,7 @@ class CriaTabelaEnderecos extends Migration
     public function up()
     {
         Schema::create('tb_conf_endereco', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_endereco');
             $table->string('endereco_cep')->nullable()->default(null);
             $table->string('endereco_logradouro')->nullable()->default(null);
             $table->string('endereco_numero')->nullable()->default(null);
@@ -24,9 +24,9 @@ class CriaTabelaEnderecos extends Migration
             $table->integer('fk_uf')->unsigned();
             $table->integer('fk_entidade')->unsigned();
             $table->integer('fk_usuario')->unsigned();
-            $table->foreign('fk_cidade')->references('id')->on('tb_cidades');
-            $table->foreign('fk_uf')->references('id')->on('tb_conf_uf');
-            $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
+            $table->foreign('fk_cidade')->references('id_cidades')->on('tb_cidades');
+            $table->foreign('fk_uf')->references('id_uf')->on('tb_conf_uf');
+            $table->foreign('fk_entidade')->references('id_entidade')->on('tb_entidade');
             $table->foreign('fk_usuario')->references('id')->on('users');
             $table->timestamps();
         });

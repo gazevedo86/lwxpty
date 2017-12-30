@@ -14,7 +14,7 @@ class CriaTabelaListaBancos extends Migration
     public function up()
     {
         Schema::create('tb_lista_bancos', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_lista_banco');
       $table->integer('bancos_codigo')->nullable();
       $table->string('bancos_nome', 255)->nullable();
 

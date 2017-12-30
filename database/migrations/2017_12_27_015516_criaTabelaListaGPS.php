@@ -14,7 +14,7 @@ class CriaTabelaListaGPS extends Migration
     public function up()
     {
         Schema::create('tb_lista_gps', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_lista_gps');
        $table->integer('gps_codigo')->nullable();
        $table->string('gps_nome', 255)->nullable();
 

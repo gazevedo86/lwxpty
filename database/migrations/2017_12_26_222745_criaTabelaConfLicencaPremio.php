@@ -14,7 +14,7 @@ class CriaTabelaConfLicencaPremio extends Migration
     public function up()
     {
         Schema::create('tb_conf_licenca_premio', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('idlicenca_premio');
        $table->integer('licenca_premio_calcular_media')->nullable();
        $table->integer('licenca_premio_controla_data_pagamento')->nullable();
        $table->integer('licenca_premio_falta_injustificada')->nullable();
@@ -27,7 +27,7 @@ class CriaTabelaConfLicencaPremio extends Migration
        $table->index('fk_usuario','fk_tb_licenca_premio_users1_idx');
 
        $table->foreign('fk_entidade')
-           ->references('id')->on('tb_entidade');
+           ->references('id_entidade')->on('tb_entidade');
 
        $table->foreign('fk_usuario')
            ->references('id')->on('users');

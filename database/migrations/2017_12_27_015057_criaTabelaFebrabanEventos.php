@@ -14,7 +14,7 @@ class CriaTabelaFebrabanEventos extends Migration
     public function up()
     {
         Schema::create('tb_febraban_eventos', function (Blueprint $table) {
-          $table->increments('id');
+          $table->increments('id_febraban');
      $table->string('febraban_eventos_codigo', 255)->nullable();
      $table->string('febraban_eventos_nome', 255)->nullable();
 

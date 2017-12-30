@@ -14,7 +14,7 @@ class CriaTabelaConfCalculos extends Migration
     public function up()
     {
         Schema::create('tb_conf_calculos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_calculos');
             $table->integer("calculos_mudar_referencia_salario_automatica")->nullable()->default(null);
             $table->integer("calculos_mudar_referencia_salario_tempo")->nullable()->default(null);
             $table->integer("calculos_mudar_referencia_salario_carencia")->nullable()->default(null);
@@ -41,7 +41,7 @@ class CriaTabelaConfCalculos extends Migration
             $table->integer("calculos_gerar_adiantamento_mensal_servidores")->nullable()->default(null);
             $table->integer('fk_usuario')->unsigned();
             $table->integer('fk_entidade')->unsigned();
-            $table->foreign('fk_entidade')->references('id')->on('tb_entidade');
+            $table->foreign('fk_entidade')->references('id_entidade')->on('tb_entidade');
             $table->foreign('fk_usuario')->references('id')->on('users');
 
 
