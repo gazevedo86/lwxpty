@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Entidade;
-
+use Gate;
+use Auth;
+use User;
 class controllerEntidade extends Controller
 {
 
@@ -25,9 +27,12 @@ class controllerEntidade extends Controller
         return view('entidades.cadastroEntidade', ['retornaEntidade'=>$retornaEntidade]);
     }
 
+
     public function adminEntidade($id){
-      $entidades = $this->entidade->retornaCadastroEntidade($id);
-      return view('entidades.adminEntidade', ['entidades'=>$entidades]);
+        $entidades = $this->entidade->retornaCadastroEntidade($id);
+        return view('entidades.adminEntidade', ['entidades'=>$entidades]);
+
+
     }
 
 
@@ -50,7 +55,9 @@ class controllerEntidade extends Controller
      */
     public function store(Request $request)
     {
+
         $infPostEntidade = $request->except('_token','salvar','inserir');
+        $infPostEntidade['proprietario']=Auth::id();
         $insereEntidade = $this->entidade->insereNovaEntidade($infPostEntidade);
         return redirect('/cadastroEntidade');
     }

@@ -23,6 +23,7 @@ class Entidade extends Model
      return $entidades = DB::table($this->tabela)->select('nome_entidade','id_entidade')->get()->pluck('nome_entidade','id_entidade');
     }
 
+
     public function retornaCadastroEntidade($id){
       return $cadastroEntidade = DB::table('tb_entidade')
           ->leftjoin('tb_conf_decsalario','tb_conf_decsalario.fk_entidade','=','tb_entidade.id_entidade')

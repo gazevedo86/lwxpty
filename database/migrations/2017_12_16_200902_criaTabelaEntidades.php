@@ -19,6 +19,8 @@ class CriaTabelaEntidades extends Migration
             $table->string('nome_entidade')->nullable()->default(null);
             $table->string('tipo')->nullable()->default(null);
             $table->string('numero')->nullable()->default(null);
+            $table->integer('proprietario')->unsigned();
+            $table->foreign('proprietario')->references('id')->on('users');
             $table->timestamps();
         });
     }

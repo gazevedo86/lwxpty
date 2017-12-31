@@ -13,7 +13,7 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-12">
-              <img alt="image" class="img-circle" src="/img/profile_small.jpg" width="90" height="90" />
+{{Html::image(base64_encode($entidade->outras_informacoes_imagem))}}
               {{Form::file('outras_informacoes_imagem',array('class'=>'form-control','id'=>'outras_informacoes_imagem'))}}
             </div>
           </div>
