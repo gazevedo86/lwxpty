@@ -167,6 +167,8 @@ GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
 Laracasts\Flash\FlashServiceProvider::class,
 Laravel\Socialite\SocialiteServiceProvider::class,
 Collective\Html\HtmlServiceProvider::class,
+//LaravelAcl\Authentication\AuthenticationServiceProvider::class,
+
         /*
          * Package Service Providers...
          */

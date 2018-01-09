@@ -26,3 +26,4 @@ Route::post("/insereConfiguracao/{id}/area/{string}", 'controllerConfiguracao@up
 
 
 Route::get("/eventos", 'controllerEventos@index')->name('eventos');
+Route::get('/ajaxListaMunicipio','controllerConfiguracao@listaMunicipio');

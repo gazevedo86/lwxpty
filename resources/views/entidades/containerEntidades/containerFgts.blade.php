@@ -14,11 +14,11 @@
           <div class="row">
             <div class="col-sm-3">
               {{ Form::label('fgts_codigo_pagamento_gps', 'Código de pagamento GPS') }}
-              {{Form::select('fgts_codigo_pagamento_gps',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'fgts_codigo_pagamento_gps'))}}
+              {{Form::select('fgts_codigo_pagamento_gps',array('1'=>'codigo1'),(($entidade->fgts_codigo_pagamento_gps)?$entidade->fgts_codigo_pagamento_gps:''),array('class'=>'select2_demo_1 form-control','id'=>'fgts_codigo_pagamento_gps'))}}
             </div>
             <div class="col-sm-9">
               {{ Form::label('descricao_fgts_codigo_pagamento_gps', '&nbsp;') }}
-              {{Form::text('descricao_fgts_codigo_pagamento_gps','',array('class'=>'form-control','id'=>'descricao_fgts_codigo_pagamento_gps'))}}
+              {{Form::text('descricao_fgts_codigo_pagamento_gps',(($entidade->descricao_fgts_codigo_pagamento_gps)?$entidade->descricao_fgts_codigo_pagamento_gps:''),array('class'=>'form-control','id'=>'descricao_fgts_codigo_pagamento_gps'))}}
             </div>
 
           </div>
@@ -27,12 +27,12 @@
           <div class="row">
             <div class="col-sm-3">
               {{ Form::label('fgts_codigo_recolhimento_sefip', 'Código de recolhimento SEFIP') }}
-              {{Form::select('fgts_codigo_recolhimento_sefip',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'fgts_codigo_recolhimento_sefip'))}}
+              {{Form::select('fgts_codigo_recolhimento_sefip',array('1'=>'codigo1'),(($entidade->fgts_codigo_recolhimento_sefip)?$entidade->fgts_codigo_recolhimento_sefip:''),array('class'=>'select2_demo_1 form-control','id'=>'fgts_codigo_recolhimento_sefip'))}}
             </div>
 
             <div class="col-sm-9">
               {{ Form::label('descricao_fgts_codigo_recolhimento_sefip', '&nbsp;') }}
-              {{Form::text('descricao_fgts_codigo_recolhimento_sefip','',array('class'=>'form-control','id'=>'descricao_fgts_codigo_recolhimento_sefip'))}}
+              {{Form::text('descricao_fgts_codigo_recolhimento_sefip',(($entidade->descricao_fgts_codigo_recolhimento_sefip)?$entidade->descricao_fgts_codigo_recolhimento_sefip:''),array('class'=>'form-control','id'=>'descricao_fgts_codigo_recolhimento_sefip'))}}
             </div>
 
           </div>

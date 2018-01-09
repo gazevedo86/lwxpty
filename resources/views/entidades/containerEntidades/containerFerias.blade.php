@@ -14,7 +14,7 @@
           <div class="row">
             <div class="col-md-3 ">
               {{ Form::label('ferias_tipo_pagamento','Recibo de férias') }}
-              {{Form::select('ferias_tipo_pagamento',array('1'=>'codigo1'),null,array('class'=>'select2_demo_1 form-control','id'=>'ferias_tipo_pagamento'))}}
+              {{Form::select('ferias_tipo_pagamento',array('2'=>'codigo1'),$entidade->ferias_tipo_pagamento,array('class'=>'select2_demo_1 form-control','id'=>'ferias_tipo_pagamento'))}}
             </div>
           </div>
         </div>

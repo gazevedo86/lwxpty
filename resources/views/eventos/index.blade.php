@@ -3,5 +3,6 @@
 @section('title', 'Main page')
 
 @section('content')
-asdasdasd
+
+
 @endsection

@@ -13,37 +13,38 @@
       <div class="ibox-content">
         <div class="form-group">
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-3">
               {{ Form::label('endereco_cep', 'CEP') }}
-              {{Form::text('endereco_cep',(isset($pessoa->cep)? $pessoa->cep : ''),array('class'=>'form-control','id'=>'endereco_cep','placeholder'=>'CEP'))}}
+              {{Form::text('endereco_cep',(isset($entidade->endereco_cep)? $entidade->endereco_cep : ''),array('class'=>'form-control','id'=>'endereco_cep','placeholder'=>'CEP'))}}
             </div>
-            <div class="col-sm-3">
+            <div class="col-md-3">
               {{ Form::label('endereco_logradouro', 'Logradouro') }}
-              {{Form::text('endereco_logradouro',(isset($pessoa->logradouro)?$pessoa->logradouro:''),array('class'=>'form-control','id'=>'endereco_logradouro','placeholder'=>'Logradouro'))}}
+              {{Form::text('endereco_logradouro',(isset($entidade->endereco_logradouro)?$entidade->endereco_logradouro:''),array('class'=>'form-control','id'=>'endereco_logradouro','placeholder'=>'Logradouro'))}}
             </div>
-            <div class="col-sm-3">
+            <div class="col-md-3">
               {{ Form::label('endereco_numero', 'Nº') }}
-              {{Form::text('endereco_numero',(isset($pessoa->numero_endereco)?$pessoa->numero_endereco:''),array('class'=>'form-control','id'=>'endereco_numero','placeholder'=>'Nº'))}}
+              {{Form::text('endereco_numero',(isset($entidade->endereco_numero)?$entidade->endereco_numero:''),array('class'=>'form-control','id'=>'endereco_numero','placeholder'=>'Nº'))}}
             </div>
-            <div class="col-sm-3">
+            <div class="col-md-3">
               {{ Form::label('endereco_complemento', 'Complemento') }}
-              {{Form::text('endereco_complemento',(isset($pessoa->complemento)?$pessoa->complemento:''),array('class'=>'form-control','id'=>'endereco_complemento','placeholder'=>'Complemento'))}}
+              {{Form::text('endereco_complemento',(isset($entidade->endereco_complemento)?$entidade->endereco_complemento:''),array('class'=>'form-control','id'=>'endereco_complemento','placeholder'=>'Complemento'))}}
             </div>
           </div>
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-sm-4">
+
+            <div class="col-md-4">
               {{ Form::label('endereco_bairro', 'Complemento') }}
-              {{Form::text('endereco_bairro',(isset($pessoa->bairro)?$pessoa->bairro:''),array('class'=>'form-control','id'=>'endereco_bairro','placeholder'=>'Bairro'))}}
+              {{Form::text('endereco_bairro',(isset($entidade->endereco_bairro)?$entidade->endereco_bairro:''),array('class'=>'form-control','id'=>'endereco_bairro','placeholder'=>'Bairro'))}}
             </div>
-            <div class="col-sm-4">
-              {{ Form::label('fk_cidade', 'Cidade') }}
-              {{Form::select('fk_cidade',array('1'=>'cidades'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_cidade'))}}
-            </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
               {{ Form::label('fk_uf', 'UF') }}
-              {{Form::select('fk_uf',array('1'=>'estados'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_uf'))}}
+              {{Form::select('fk_uf',$listaEstados,(isset($entidade->fk_uf)?$entidade->fk_uf:null),array('class'=>'select2_demo_1 form-control','id'=>'fk_uf'))}}
+            </div>
+            <div class="col-md-4">
+              {{ Form::label('fk_cidade', 'Cidade') }}
+              {{Form::select('fk_cidade',array('1'=>'1'),null,array('class'=>'select2_demo_1 form-control','id'=>'fk_cidade'))}}
             </div>
           </div>
         </div>

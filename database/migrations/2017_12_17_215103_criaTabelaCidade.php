@@ -15,8 +15,10 @@ class CriaTabelaCidade extends Migration
     {
         Schema::create('tb_cidades', function (Blueprint $table) {
             $table->increments('id_cidades');
-            $table->biginteger('codigo');
+            $table->biginteger('codigo')->nullable()->default(null);
             $table->string('nome');
+            $table->integer('fk_uf')->unsigned();
+            $table->foreign('fk_uf')->references('id_uf')->on('tb_conf_uf')->onDelete('cascade');
             $table->timestamps();
         });
     }

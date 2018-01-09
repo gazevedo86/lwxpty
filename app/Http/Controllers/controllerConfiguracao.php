@@ -14,6 +14,17 @@ class controllerConfiguracao extends Controller
 
      }
 
+     public function listaMunicipio(Request $request){
+        $req = $request->all();
+        $configuracao = new Configuracao();
+
+        $listaMunicipios = $configuracao->listaMunicipiosEstado($req['id']);
+        $listaMunicipiosas = explode(',',$listaMunicipios);
+        //print_r($listaMunicipiosas);
+        return $listaMunicipiosas;
+
+      }
+
     public function index()
     {
         //

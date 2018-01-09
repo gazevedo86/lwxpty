@@ -11,6 +11,7 @@ elixir(mix => {
         'resources/assets/inspinia/css/animate.css',
         'resources/assets/inspinia/css/plugins/select2/select2.min.css',
         'resources/assets/inspinia/css/plugins/switchery/switchery.css',
+        'resources/assets/inspinia/css/plugins/jasny/jasny-bootstrap.min.css',
         'resources/assets/inspinia/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css',
 
 
@@ -41,6 +42,7 @@ elixir(mix => {
         'resources/assets/inspinia/js/entidade.js',
         'resources/assets/inspinia/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js',
         'resources/assets/inspinia/js/plugins/select2/select2.full.min.js',
+        'resources/assets/inspinia/js/plugins/jasny/jasny-bootstrap.min.js',
 'resources/assets/inspinia/js/plugins/switchery/switchery.js',
 
 
